@@ -10,7 +10,7 @@ RUN apt-get update && \
     tar xzf collectd-5.4.1.tar.gz && \
     cd collectd-5.4.1 && \
     ./configure --prefix=/usr/local --disable-daemon --disable-all-plugins \
-      --enable-exec --enable-network --enable-rrdtool --enable-syslog && \
+      --enable-exec --enable-network --enable-rrdtool --enable-logfile && \
     make && \
     make install && \
     mkdir -p /var/lib/collectd/rrd && \
