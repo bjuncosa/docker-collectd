@@ -28,5 +28,6 @@ ADD collectd.conf /etc/collectd/
 
 EXPOSE 25826/udp
 
-CMD ["/usr/local/sbin/collectd", "-C", "/etc/collectd/collectd.conf"]
+VOLUME [ "/var/lib/collectd/rrd" ]
 
+CMD ["/usr/local/sbin/collectd", "-C", "/etc/collectd/collectd.conf"]
